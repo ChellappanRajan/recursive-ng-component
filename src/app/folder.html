@@ -1,0 +1,22 @@
+@let currentFolder = folder(); @let _isOpen = isOpen(); @if (currentFolder) {
+@let rotateIcon = `flex size-4 text-gray-500 ${_isOpen ? "rotate-90" : ""}`;
+<li class="py-1.5">
+  <span class="flex items-center gap-1.5">
+    @if(currentFolder.folders?.length){
+    <button (click)="onClick()" [class]="rotateIcon">
+      <chevron-right-icon />
+    </button>
+    } @if (currentFolder.folders) { @let folderHasItem =
+    currentFolder.folders?.length === 0 ? 'ml-[22px]' : '';
+    <folder-icon [class]="folderHasItem"></folder-icon>
+    } @else {
+    <document-icon class="ml-[22px]" />
+    } {{ currentFolder.name }}
+  </span>
+  @if (isOpen()) { @for (fol of currentFolder?.folders; track fol) {
+  <ul class="pl-6">
+    <folder [folder]="fol"></folder>
+  </ul>
+  } }
+</li>
+}

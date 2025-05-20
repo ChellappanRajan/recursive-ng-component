@@ -1,0 +1,21 @@
+import { Component, input, ViewEncapsulation } from "@angular/core";
+import type { Folder } from "./folder-model";
+import { FolderIcon } from "./folder-icon";
+import { DocumentIcon } from "./document-icon";
+
+@Component({
+  selector: "chevron-right-icon",
+  template: `
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      height="24px"
+      viewBox="0 -960 960 960"
+      width="24px"
+      fill="#000000"
+    >
+      <path d="M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z" />
+    </svg>
+  `,
+  encapsulation: ViewEncapsulation.None,
+})
+export class ChevronIcon {}
