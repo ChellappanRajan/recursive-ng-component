@@ -3,16 +3,16 @@ import { Component, ViewEncapsulation } from "@angular/core";
 @Component({
   selector: "card",
   template: `
-    <a href="#" className="card">
-      <div className="card-description">
-        <h3 className="card-title">Project name</h3>
-        <p className="card-subtitle">Project description</p>
+    <a href="#" class="card">
+      <div class="card-description">
+        <h3 class="card-title">Project name</h3>
+        <p class="card-subtitle">Project description</p>
         <svg
           width="11"
           height="11"
           viewBox="0 0 11 11"
           fill="none"
-          className="card-icon"
+          class="card-icon"
         >
           <path
             fillRule="evenodd"

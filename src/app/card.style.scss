@@ -1,4 +1,5 @@
 .card {
+  --margin: 6px;
   width: 340px;
   height: 340px;
   border-radius: 16px;
@@ -43,4 +44,15 @@
   color: #717175;
   line-height: 1;
   margin-top: 4px;
+}
+.card {
+  overflow: hidden;
+}
+.card-description {
+  transition: all 0.3s ease-in-out;
+  transform: translateY(calc(100% + var(--margin) + 1px));
+}
+
+:is(.card:hover, .card:focus-visible) .card-description {
+  transform: translateY(0px);
 }
