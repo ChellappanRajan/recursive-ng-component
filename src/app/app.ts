@@ -4,10 +4,11 @@ import { FolderComponet } from "./ui/recursive/folder";
 import type { Folders } from "./ui/recursive/folder-model";
 import { single } from "rxjs";
 import { CarouselComponent } from "./ui/carousel";
+import { CardComponent } from "./card";
 
 @Component({
   selector: "app-root",
-  imports: [FolderComponet, CarouselComponent],
+  imports: [FolderComponet, CardComponent, CarouselComponent],
   templateUrl: "./app.html",
   styleUrl: "./app.scss",
   encapsulation: ViewEncapsulation.None,
@@ -15,7 +16,7 @@ import { CarouselComponent } from "./ui/carousel";
 export class App {
   activeIndex = signal(0);
 
-  cards = new Array(4);
+  cards = new Array(7);
 
   images = [
     {

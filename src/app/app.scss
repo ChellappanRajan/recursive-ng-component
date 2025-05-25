@@ -28,3 +28,15 @@
   height: 100vh;
   place-content: center;
 }
+.box-inner {
+  height: 56px;
+  width: 56px;
+  border-radius: 50%;
+  background: #fad655;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.box:hover .box-inner {
+  transform: translateY(-20%);
+}

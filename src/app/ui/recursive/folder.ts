@@ -8,6 +8,7 @@ import { ChevronIcon } from "./right-arrow";
   selector: "folder",
   imports: [FolderIcon, ChevronIcon, DocumentIcon],
   templateUrl: "./folder.html",
+  styles: [],
   encapsulation: ViewEncapsulation.None,
 })
 export class FolderComponet {
