@@ -6,12 +6,16 @@ import { single } from "rxjs";
 import { CarouselComponent } from "./ui/carousel";
 import { CardComponent } from "./card";
 import { ArrowAnimationComponent } from "./arrow-animation";
+import { ToasterComponent } from "./ui/Toaster/toaster";
+import { ToastComponent } from "./ui/Toaster/toast";
 
 @Component({
   selector: "app-root",
   imports: [
     FolderComponet,
     CardComponent,
+    ToasterComponent,
+    ToastComponent,
     CarouselComponent,
     ArrowAnimationComponent,
   ],
@@ -21,6 +25,8 @@ import { ArrowAnimationComponent } from "./arrow-animation";
 })
 export class App {
   activeIndex = signal(0);
+
+  toasts: number[] = [];
 
   cards = new Array(7);
 
@@ -113,5 +119,12 @@ export class App {
     const marker = document.createElement("mark");
     console.log(range);
     range.surroundContents(marker);
+  }
+  addToast() {
+    this.toasts.push(1);
+  }
+
+  invert(idx: number) {
+    return this.toasts.length - (idx + 1);
   }
 }

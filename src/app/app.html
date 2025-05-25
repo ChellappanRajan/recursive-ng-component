@@ -1,4 +1,4 @@
-<div class="p-8 max-w-sm mx-auto">
+<!-- <div class="p-8 max-w-sm mx-auto">
   <ul class="pl-6">
     @for(folder of folders;track folder){
     <folder [folder]="folder" />
@@ -34,4 +34,12 @@
 
 <section class="arrow-animation">
   <arrow-animation></arrow-animation>
+</section> -->
+<section class="arrow-animation">
+  <toaster>
+    @for(toast of toasts;track $index;let idx = $index;){
+    <toast [style.--index]="invert(idx)"></toast>
+    }
+  </toaster>
+  <button (click)="addToast()" class="button">Add Toast</button>
 </section>

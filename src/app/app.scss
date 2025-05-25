@@ -44,5 +44,6 @@
 .arrow-animation {
   width: 100vw;
   height: 100vh;
-  margin: auto;
+  display: grid;
+  place-items: center;
 }

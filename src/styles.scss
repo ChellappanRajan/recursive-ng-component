@@ -1,2 +1,18 @@
 /* You can add global styles to this file, and also import other style files */
- @use "tailwindcss";
+@use "tailwindcss";
+
+.button {
+  position: relative;
+  display: inline-block;
+  margin-top: auto;
+  padding-inline: 12px;
+  width: auto;
+  height: 32px;
+  font-size: 14px;
+  font-weight: 500;
+  background: #fff;
+  border-radius: 9999px;
+  box-shadow:
+    0 0 0 1px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.04);
+}
