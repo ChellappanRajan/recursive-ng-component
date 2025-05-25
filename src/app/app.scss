@@ -40,7 +40,8 @@
 .box:hover .box-inner {
   transform: translateY(-20%);
 }
-.card-animation {
+.card-animation,
+.arrow-animation {
   width: 100vw;
   height: 100vh;
   margin: auto;

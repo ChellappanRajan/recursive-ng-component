@@ -5,10 +5,16 @@ import type { Folders } from "./ui/recursive/folder-model";
 import { single } from "rxjs";
 import { CarouselComponent } from "./ui/carousel";
 import { CardComponent } from "./card";
+import { ArrowAnimationComponent } from "./arrow-animation";
 
 @Component({
   selector: "app-root",
-  imports: [FolderComponet, CardComponent, CarouselComponent],
+  imports: [
+    FolderComponet,
+    CardComponent,
+    CarouselComponent,
+    ArrowAnimationComponent,
+  ],
   templateUrl: "./app.html",
   styleUrl: "./app.scss",
   encapsulation: ViewEncapsulation.None,
