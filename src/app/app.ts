@@ -3,7 +3,7 @@ import { FolderIcon } from "./ui/recursive/folder-icon";
 import { FolderComponet } from "./ui/recursive/folder";
 import type { Folders } from "./ui/recursive/folder-model";
 import { single } from "rxjs";
-import { CarouselComponent } from './ui/carousel';
+import { CarouselComponent } from "./ui/carousel";
 
 @Component({
   selector: "app-root",
@@ -14,10 +14,22 @@ import { CarouselComponent } from './ui/carousel';
 })
 export class App {
   activeIndex = signal(0);
+
+  cards = new Array(4);
+
   images = [
-    { src: 'https://placehold.co/600x400/EEE/31343C', caption: '1 A simple, fast and free image placeholder service.' },
-    { src: 'https://placehold.co/600x400/EEE/31343C', caption: '2 A simple, fast and free image placeholder service.' },
-    { src: 'https://placehold.co/600x400/EEE/31343C', caption: '3 A simple, fast and free image placeholder service.' },
+    {
+      src: "https://placehold.co/600x400/EEE/31343C",
+      caption: "1 A simple, fast and free image placeholder service.",
+    },
+    {
+      src: "https://placehold.co/600x400/EEE/31343C",
+      caption: "2 A simple, fast and free image placeholder service.",
+    },
+    {
+      src: "https://placehold.co/600x400/EEE/31343C",
+      caption: "3 A simple, fast and free image placeholder service.",
+    },
   ];
   folders: Folders = [
     {
@@ -88,12 +100,11 @@ export class App {
     },
   ];
 
-
-  onBold(){
+  onBold() {
     const selObj = window.getSelection();
-const range = selObj!.getRangeAt(0);
-const marker = document.createElement("mark");
-console.log(range);
-range.surroundContents(marker);
+    const range = selObj!.getRangeAt(0);
+    const marker = document.createElement("mark");
+    console.log(range);
+    range.surroundContents(marker);
   }
 }

@@ -18,8 +18,9 @@
 
 <section class="center">
   <div class="card-group">
-    <div class="card">1</div>
-    <div class="card">2</div>
-    <div class="card">3</div>
+    @for(card of cards; track $index;let idx = $index){ @let invert =
+    `${cards.length - 1 - idx}`;
+    <div class="card" [style.--index]="invert">{{idx}}</div>
+    }
   </div>
 </section>
