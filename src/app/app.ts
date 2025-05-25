@@ -1,16 +1,24 @@
-import { Component, ViewEncapsulation } from "@angular/core";
-import { FolderIcon } from "./folder-icon";
-import { FolderComponet } from "./folder";
-import type { Folders } from "./folder-model";
+import { Component, signal, ViewEncapsulation } from "@angular/core";
+import { FolderIcon } from "./ui/recursive/folder-icon";
+import { FolderComponet } from "./ui/recursive/folder";
+import type { Folders } from "./ui/recursive/folder-model";
+import { single } from "rxjs";
+import { CarouselComponent } from './ui/carousel';
 
 @Component({
   selector: "app-root",
-  imports: [FolderComponet],
+  imports: [FolderComponet, CarouselComponent],
   templateUrl: "./app.html",
   styleUrl: "./app.scss",
   encapsulation: ViewEncapsulation.None,
 })
 export class App {
+  activeIndex = signal(0);
+  images = [
+    { src: 'https://placehold.co/600x400/EEE/31343C', caption: '1 A simple, fast and free image placeholder service.' },
+    { src: 'https://placehold.co/600x400/EEE/31343C', caption: '2 A simple, fast and free image placeholder service.' },
+    { src: 'https://placehold.co/600x400/EEE/31343C', caption: '3 A simple, fast and free image placeholder service.' },
+  ];
   folders: Folders = [
     {
       name: "Home",
@@ -79,4 +87,13 @@ export class App {
       ],
     },
   ];
+
+
+  onBold(){
+    const selObj = window.getSelection();
+const range = selObj!.getRangeAt(0);
+const marker = document.createElement("mark");
+console.log(range);
+range.surroundContents(marker);
+  }
 }

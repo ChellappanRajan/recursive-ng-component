@@ -1,0 +1,28 @@
+.card {
+  &-group {
+    display: grid;
+  }
+  grid-area: 1 / 1;
+  width: 356px;
+  height: 74px;
+  box-shadow: 0 4px 12px #0000001a;
+  border: 1px solid #eeeeee;
+  background: white;
+  border-radius: 8px;
+  &:nth-child(1) {
+    transform: translateY(-26%);
+  }
+  &:nth-child(2) {
+    transform: translateY(-13%);
+  }
+  &:nth-child(3) {
+    transform: translateY(0);
+  }
+}
+.center {
+  margin: auto;
+  width: 100vw;
+  display: grid;
+  height: 100vh;
+  place-content: center;
+}

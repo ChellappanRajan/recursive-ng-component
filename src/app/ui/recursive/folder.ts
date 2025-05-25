@@ -1,7 +1,7 @@
 import { Component, input, signal, ViewEncapsulation } from "@angular/core";
 import type { Folder } from "./folder-model";
 import { FolderIcon } from "./folder-icon";
-import { DocumentIcon } from "./document-icon";
+import { DocumentIcon } from "../../document-icon";
 import { ChevronIcon } from "./right-arrow";
 
 @Component({

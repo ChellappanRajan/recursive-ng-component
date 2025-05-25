@@ -1,7 +1,4 @@
-import { Component, input, ViewEncapsulation } from "@angular/core";
-import type { Folder } from "./folder-model";
-import { FolderIcon } from "./folder-icon";
-import { DocumentIcon } from "./document-icon";
+import { Component, ViewEncapsulation } from "@angular/core";
 
 @Component({
   selector: "chevron-right-icon",
